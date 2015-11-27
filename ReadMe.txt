@@ -8,7 +8,7 @@ This project demonstrates the use of the multi-image dragging API introduced in 
 ===========================================================================
 BUILD REQUIREMENTS:
 
-Mac OS X Lion
+Mac OS X Lion, Xcode 4.3
 
 ===========================================================================
 RUNTIME REQUIREMENTS:
@@ -33,5 +33,8 @@ Version 1.0
 Version 1.1
 - Fixed crashing bug when closing secondary windows.
 
+Version 1.2
+- Upgraded to Xcode 4.3 and Mac OS X 10.7
+
 ===========================================================================
-Copyright (C) 2011 Apple Inc. All rights reserved.
+Copyright (C) 2011-2012 Apple Inc. All rights reserved.

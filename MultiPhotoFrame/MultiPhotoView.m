@@ -6,7 +6,7 @@
  
  Layout: This view is made up of Photo Cell Views which are laid out automatically. The Cell Views are loaded from a nib file via PhotoCellViewControllers. Since this demo focuses on dragging, layout is done manually on up to 4 image files. If you drop more images to exceed a total of 4, the currently shown images will fade away during the drop animation.
   
-  Version: 1.1 
+  Version: 1.2 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -46,7 +46,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2011 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -551,7 +551,7 @@ NSString *kPrivateDragUTI = @"com.apple.private.MultiPhotoViewNewWindow";
     
     // Update out model data
     [photoCellViewControllers release];
-    photoCellViewControllers = [controllersForLayout retain];
+    photoCellViewControllers = (NSMutableArray *)[controllersForLayout retain];
     
     /* We have the information we need to enumerate the dragging items and update the drag images.
     */

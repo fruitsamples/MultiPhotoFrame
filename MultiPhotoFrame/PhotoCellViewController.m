@@ -2,7 +2,7 @@
      File: PhotoCellViewController.m 
  Abstract: The view controller for each Photo Cell View. It is responsible for setting up the representedObject dictionary from a URL, determining the photo orientation, and providing the images for dragging.
   
-  Version: 1.1 
+  Version: 1.2 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2011 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -75,7 +75,7 @@ NSImage *cacheImageOfView(NSView *view);
     MDItemRef mdItemRef = MDItemCreateWithURL(kCFAllocatorDefault, (CFURLRef)url);
     assert(mdItemRef);
     NSString *commentStr = [(NSString*)MDItemCopyAttribute(mdItemRef, kMDItemFinderComment) autorelease];
-    if (!commentStr) commentStr = kMissingFinderInfo;
+    if (!commentStr) commentStr = @"";
     CFRelease(mdItemRef);
     
     PhotoCellViewController *pcvController = [[PhotoCellViewController alloc] initWithNibName:@"PhotoCellView" bundle:nil];
@@ -156,5 +156,4 @@ NSImage *cacheImageOfView(NSView *view) {
 
 NSString * const kImageUrlKey = @"imageURL";
 NSString * const kLabelKey = @"label";
-NSString * const kMissingFinderInfo = @"Add comment in Finder";
 
